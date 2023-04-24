@@ -1,0 +1,25 @@
+/* Selector universal
+* { color: red;
+}*/
+
+h1{
+    color: blue;
+}
+
+div article p{
+    font-size:20px;
+    color: black;
+}
+
+div p a{
+    color: red;
+}
+
+.grande{
+    font-size: 28px;
+}
+.rojo{
+    color: red;
+}
+
+

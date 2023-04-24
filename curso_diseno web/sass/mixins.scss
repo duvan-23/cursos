@@ -1,0 +1,24 @@
+// @mixin colores ($fondo,$articulo){
+//     body{
+//         background: $fondo;
+//     }
+//     .articulo{
+//         background: $articulo;
+//     }
+// }
+// @include colores(#ff8000,#fff );
+
+// @mixin borde-redondeado($pixeles){
+//     border-radious:$pixeles;
+// }
+
+// article{
+//    @include borde-redondeado(5px);
+// }
+// footer{
+//     @include borde-redondeado(15px);
+// }
+
+article{
+    background: rgba(#ff8000, 0.5);
+}

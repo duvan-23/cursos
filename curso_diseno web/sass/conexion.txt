@@ -1,0 +1,12 @@
+
+C:\Users\duvam>c:
+
+C:\Users\duvam>cd C:\Users\duvam\Documents\curso diseño web\sass
+
+C:\Users\duvam\Documents\curso diseño web\sass>sass estilos.scss:estilos.css
+
+C:\Users\duvam\Documents\curso diseño web\sass>
+
+//////////////////////////////////////////////////////////
+
+C:\Users\duvam\Documents\curso diseño web\sass>sass --watch estilos.scss:estilos.css

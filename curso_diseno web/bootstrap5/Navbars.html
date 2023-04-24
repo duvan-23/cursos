@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbars</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body{
+            padding-top:56px;
+            /* padding-bottom: 56px; */
+        }
+    </style>
+</head>
+<body>
+    	<!-- .navbar-expand-lg	Sirve para indicar en que punto aparecera el toggler -->
+	<!-- .navbar-light 		Indicamos que usaremos un fondo claro -->
+	<!-- .navbar-dark 		Indicamos que usaremos un fondo oscuro -->
+	<!-- .bg-light 			Establecemos un fondo light para el navbar -->
+	<!-- Tambien podemos darle nuestro propio color de fondo con CSS -->
+
+	<!-- .fixed-top 		Nos permite fijar el menu en la parte superior -->
+	<!-- .fixed-bottom 		Nos permite fijar el menu en la parte inferior -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top"> <!--poner fixed-top dentro de class para fijar -->
+        <!-- .container nos permite centrar el contenido de nuestro menu, esta clase es opcional y podemos encerrar el menu <nav> o incluir el contenedor dentro del <nav> -->
+        <div class="container">
+            <!-- Nos sirve para agregar un logotipo al menu -->
+            <a href="#" class="navbar-brand">Menu</a>
+            
+            <!-- Nos permite usar el componente collapse para dispositivos moviles -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#fm-navbar" aria-controls="fm-navbar" aria-expanded="false" arial-label="Menu de Navegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="fm-navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Inicio</a>
+                    </li>
+
+                    <!-- Submenu  -->
+                    <li class="nav-item dropdown"> <!--aca cambia direccion del submenu ejemplo:dropright -->
+                        <a href="#" class="nav-link dropdown-toggle" id="menu-categorias" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Blog
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="menu-categorias">
+                            <a href="#" class="dropdown-item">HTML</a>
+                            <a href="#" class="dropdown-item">CSS</a>
+                            <a href="#" class="dropdown-item">JS</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropright">
+                        <a href="#" class="nav-link dropdown-toggle" id="menu-categorias" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Blog 2
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="menu-categorias">
+                            <a href="#" class="dropdown-item">HTML</a>
+                            <a href="#" class="dropdown-item">CSS</a>
+                            <a href="#" class="dropdown-item">JS</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Proximamente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contacto</a>
+                    </li>
+                </ul>
+
+                <form action="" class="form-inline my-2 my-lg-0">
+                    <input type="text" class="form-control mr-sm-2" placeholder="Buscar" aria-label="buscar">
+                    <button class="btn btn-primary my-2 my-sm-0">Buscar</button>
+                </form>
+            </div>
+        </div>
+        
+    </nav>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark  "> <!--poner fixed-top dentro de class para fijar -->
+        <div class="container">
+            <a href="#" class="navbar-brand">Menu</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#fm-navbar" aria-controls="fm-navbar" aria-expanded="false" arial-label="Menu de Navegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="fm-navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Inicio</a>
+                    </li>
+
+                    <!-- Submenu  -->
+                    <li class="nav-item dropdown"> <!--aca cambia direccion del submenu ejemplo:dropright -->
+                        <a href="#" class="nav-link dropdown-toggle" id="menu-categorias" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Blog
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="menu-categorias">
+                            <a href="#" class="dropdown-item">HTML</a>
+                            <a href="#" class="dropdown-item">CSS</a>
+                            <a href="#" class="dropdown-item">JS</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropup">
+                        <a href="#" class="nav-link dropdown-toggle" id="menu-categorias" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Blog 2
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="menu-categorias">
+                            <a href="#" class="dropdown-item">HTML</a>
+                            <a href="#" class="dropdown-item">CSS</a>
+                            <a href="#" class="dropdown-item">JS</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Proximamente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contacto</a>
+                    </li>
+                </ul>
+
+                <form action="" class="form-inline my-2 my-lg-0">
+                    <input type="text" class="form-control mr-sm-2" placeholder="Buscar" aria-label="buscar">
+                    <button class="btn btn-primary my-2 my-sm-0">Buscar</button>
+                </form>
+            </div>
+        </div>
+        
+    </nav>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary  "> <!--poner fixed-top dentro de class para fijar -->
+        <div class="container">
+            <a href="#" class="navbar-brand">Menu</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#fm-navbar" aria-controls="fm-navbar" aria-expanded="false" arial-label="Menu de Navegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="fm-navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Inicio</a>
+                    </li>
+
+                    <!-- Submenu  -->
+                    <li class="nav-item dropdown"> <!--aca cambia direccion del submenu ejemplo:dropright -->
+                        <a href="#" class="nav-link dropdown-toggle" id="menu-categorias" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Blog
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="menu-categorias">
+                            <a href="#" class="dropdown-item">HTML</a>
+                            <a href="#" class="dropdown-item">CSS</a>
+                            <a href="#" class="dropdown-item">JS</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropup">
+                        <a href="#" class="nav-link dropdown-toggle" id="menu-categorias" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Blog 2
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="menu-categorias">
+                            <a href="#" class="dropdown-item">HTML</a>
+                            <a href="#" class="dropdown-item">CSS</a>
+                            <a href="#" class="dropdown-item">JS</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Proximamente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contacto</a>
+                    </li>
+                </ul>
+
+                <form action="" class="form-inline my-2 my-lg-0">
+                    <input type="text" class="form-control mr-sm-2" placeholder="Buscar" aria-label="buscar">
+                    <button class="btn btn-primary my-2 my-sm-0">Buscar</button>
+                </form>
+            </div>
+        </div>
+        
+    </nav>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col">
+                <div class="jumbotron">
+                    <h3>Titulo</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit omnis laudantium, odit ullam nulla praesentium numquam repellat excepturi nobis. Doloribus, temporibus itaque. Est odit delectus voluptatum tempore velit, esse incidunt obcaecati eos, veniam temporibus, minus sequi harum cumque fugit iure.</p>
+                </div>
+            </div>
+        </div>   
+       
+        <div class="row" style="margin-top: 1000px;">
+            <div class="col">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis voluptatum commodi ut ex provident dolore ratione quibusdam error delectus! Iure nihil animi impedit aliquam earum officia. Magnam quos laborum rem. Aliquam, magnam eaque? Expedita, distinctio nulla recusandae tenetur eligendi autem.</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

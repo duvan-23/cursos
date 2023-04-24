@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollspy</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        .fm-nav a{
+            color:#fff;
+            padding: 15px;
+        }
+        .fm-nav a:hover,.fm-nav .active{
+            background:rgba(255, 255, 255, .1);
+        }
+        .seccion{
+            padding-bottom: 1000px;
+        }
+        .seccion .columna{
+            padding-top: 100px;
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target="#fm-nav">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="fm-nav" id="fm-nav">
+                    <ul class="fm-nav nav fixed-top navbard-inverse bg-primary">
+                        <li class="nav-item">
+                            <a href="#seccion1" class="nav-link">Seccion #1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#seccion2" class="nav-link">Seccion #2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#seccion3" class="nav-link">Seccion #3</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row seccion" id="seccion1">
+            <div class="col columna">
+                <h2>seccion 1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore adipisci rem officiis, sapiente, placeat ea voluptatem, neque quae inventore vel ad sed delectus obcaecati aut exercitationem! Dolores minus nihil soluta ex. Mollitia libero quidem rerum minus corporis explicabo, quas in?</p>
+            </div>
+        </div>
+
+        <div class="row seccion" id="seccion2">
+            <div class="col columna">
+                <h2>seccion 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore adipisci rem officiis, sapiente, placeat ea voluptatem, neque quae inventore vel ad sed delectus obcaecati aut exercitationem! Dolores minus nihil soluta ex. Mollitia libero quidem rerum minus corporis explicabo, quas in?</p>
+            </div>
+        </div>
+
+        <div class="row seccion" id="seccion3">
+            <div class="col columna">
+                <h2>seccion 3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore adipisci rem officiis, sapiente, placeat ea voluptatem, neque quae inventore vel ad sed delectus obcaecati aut exercitationem! Dolores minus nihil soluta ex. Mollitia libero quidem rerum minus corporis explicabo, quas in?</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

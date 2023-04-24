@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventanas Modal</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-3">  
+            <div class="col">
+                <!----Modal #1 -->
+                <button class="btn btn-primary" data-toggle="modal" data-target="#fm-modal">Abrir Modal</button>
+                <div class="modal fade" id="fm-modal" tabindex="-1" role="dialog" aria-labelledby="fm-modal" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Titulo de la ventana</h5>
+                                <button class="close" data-dismiss="modal" aria-label="Cerrar">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h2>Hola Mundo</h2>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat minus itaque nam debitis id dolor, odit voluptas omnis maiores ut eligendi vitae eius earum soluta quibusdam nihil harum, reprehenderit tempora!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!----Modal #2 -->
+                <button class="btn btn-success" data-toggle="modal" data-target="#fm-modal-grid">Abrir Modal</button>
+                <div class="modal fade" id="fm-modal-grid" tabindex="-1" role="dialog" aria-labelledby="fm-modal-grid" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Modal con Grid</h5>
+                                <button class="close" data-dismiss="modal" aria-label="Cerrar">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6">
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet voluptatibus, ipsum repudiandae aut cum iusto enim fugit quasi! Velit quasi dolor neque ipsa nostrum adipisci quod natus ullam eveniet voluptatibus, nulla placeat possimus magni? Omnis autem eos harum saepe itaque.</p>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet voluptatibus, ipsum repudiandae aut cum iusto enim fugit quasi! Velit quasi dolor neque ipsa nostrum adipisci quod natus ullam eveniet voluptatibus, nulla placeat possimus magni? Omnis autem eos harum saepe itaque.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-success">Aceptar</button>
+                                <button class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

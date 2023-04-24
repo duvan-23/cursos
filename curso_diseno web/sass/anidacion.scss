@@ -1,0 +1,38 @@
+$naranja:#f9a03f;
+
+body{
+    background: #1b3d82;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.articulo{
+    background: #e9f1f7;
+    width: 500px;
+    padding: 20px;
+    .titulo{
+        color: $naranja;
+    }
+    .autor{
+        color: #4d5061;
+    }
+    p{
+        a{
+            color:$naranja;
+        }
+    }
+    div{
+        text-align: center;
+        a{
+            text-decoration: none;
+            font-size: 25px;
+            color: $naranja;
+            &:hover{
+               text-decoration: underline;   
+            }
+        }
+    }
+}
+.caja{
+    background: green;
+    width: 200px;
+}

@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    
+    font-family: Arial;
+    line-height: 22px;
+}
+.caja{
+    background: #0353a4;
+    width: 200px;
+    /* height: 200px; */
+    /* arriba/abajo  izquierda/derecha */
+    /* margin: 0px 50px; */
+    /* arriba  derecha abajo izquierda */
+    margin:20px;
+    padding: 20px;
+    /* margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-left: 0px; */
+    border: 2px solid #000;
+}
+
+.caja p{
+    background: #eee5e9;
+}

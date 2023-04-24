@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controlando Audio y Video de HTML5 con javascript</title>
+</head>
+<body>
+    <video src="media/keyboard.mp4" width="500" id="video" controls>
+        <p>Tu navegador no soporta videos en HTML5,por favor actualizalo</p>
+    </video><br>
+    <audio src="media/hyperfun.mp3" id="audio" controls>
+        <p>Tu navegador no soporta audios en HTML5,por favor actualizalo</p>
+    </audio><br>
+    <button id="play">Reproducir</button>
+    <button id="pause">Pausa</button>
+    <input type="range" value="1" min="0" max="1" step="0.1" id="volumen">
+    <script>
+        var video=document.getElementById('video'), 
+        btnPlay=document.getElementById('play'),
+        btnPause=document.getElementById('pause'),
+        volumen=document.getElementById('volumen');
+        
+        btnPlay.addEventListener('click',function(){
+            video.play();
+            // document.body.style.background='#000';
+        });
+        btnPause.addEventListener('click',function(){
+            video.pause();
+        });
+        volumen.addEventListener('change',function(){
+            video.volume=volumen.value;
+        });
+        // ------links----------------------
+        //https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
+
+        //https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Media_events
+        //------------------------------------------
+        	// -- Propiedades
+		// video.currentTime - regresa el tiempo actual en el que va el video
+		// video.duration - regresa la duracion del video
+		// video.ended - regresa si el video ya termino
+
+		// -- Eventos
+		/*
+			pause
+			play
+		*/
+    </script>
+</body>
+</html>

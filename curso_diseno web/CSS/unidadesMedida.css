@@ -1,0 +1,30 @@
+body{
+    font-size: 20px;
+}
+
+p{
+    font-size: 1.5em;
+}
+.contenedor_padre{
+    font-size: 25px;
+}
+.hijo{
+    width: 10rem;
+    height: 10rem;
+    background: black;
+    color:white;
+}
+/*
+
+Unidades Relativas
+	px - pixel
+	em - Relativa al tamaño de fuente que tenga su elemento padre o el mas cercano
+	rem - Relativa al tamaño de fuente especificado en el body.
+	% - porcentaje
+
+Unidades Abosultas
+	Estas medidas nunca las vas a usar en el diseño web, pero aqui estan para que las conozcas
+	in - inches (pulgadas)
+	cm - centimetros
+	mm - milimetros
+*/
