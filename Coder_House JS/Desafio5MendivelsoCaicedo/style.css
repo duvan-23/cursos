@@ -1,0 +1,29 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.contenedor{
+    background-color: black;
+    color: white;
+    margin-top:30px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.titulo{
+    text-align: center;
+    font-weight: 400;
+}
+.persona h2{
+    font-weight: 100;
+    margin-left: 80px;
+}
+
+.recibo h2{
+    font-size: 20px;
+    font-weight: 100;
+    margin-left: 300px;
+}
+.recibo h3{
+    margin-left: 350px;
+    font-weight: bold;
+}
