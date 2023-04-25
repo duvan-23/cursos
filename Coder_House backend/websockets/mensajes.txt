@@ -1,0 +1,26 @@
+[
+  {
+    "author": "duvan@gmail.com",
+    "message": "Buen dia",
+    "fecha": "15/5/2022 18:20:57",
+    "id": 1
+  },
+  {
+    "author": "juan@hotmail.com",
+    "message": "Buen dia, Como va todo?",
+    "fecha": "15/5/2022 18:21:34",
+    "id": 2
+  },
+  {
+    "author": "luis@hotmail.com",
+    "message": "Como estan?",
+    "fecha": "15/5/2022 18:25:0",
+    "id": 3
+  },
+  {
+    "author": "duvan@hotmail.com",
+    "message": "hoo",
+    "fecha": "18/5/2022 18:56:0",
+    "id": 4
+  }
+]

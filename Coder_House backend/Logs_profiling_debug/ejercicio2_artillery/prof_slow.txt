@@ -1,0 +1,139 @@
+Statistical profiling result from slow-v8.log, (35091 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+  32376   92.3%          C:\Windows\SYSTEM32\ntdll.dll
+   2640    7.5%          C:\Program Files\nodejs\node.exe
+      1    0.0%          C:\Windows\system32\mswsock.dll
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     41    0.1%   55.4%  LazyCompile: *calcularRandoms C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\server.js:27:25
+      6    0.0%    8.1%  RegExp: [\u001B\u009B][[\]()#;?]*(?:(?:(?:(?:;[-a-zA-Z\d\/#&.:=?%@~_]+)*|[a-zA-Z\d]+(?:;[-a-zA-Z\d\/#&.:=?%@~_]*)*)?\u0007)|(?:(?:\d{1,4}(?:;\d{0,4})*)?[\dA-PR-TZcf-ntqry=><~]))
+      4    0.0%    5.4%  LazyCompile: *groupArrayElements node:internal/util/inspect:1338:28
+      2    0.0%    2.7%  LazyCompile: *get node:_http_incoming:108:16
+      2    0.0%    2.7%  Function: ^send C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\response.js:111:25
+      2    0.0%    2.7%  Function: ^parserOnIncoming node:_http_server:852:26
+      1    0.0%    1.4%  RegExp: ^[\^_`a-zA-Z\-0-9!#$%&'*+.|~]+$
+      1    0.0%    1.4%  RegExp: ;\s*charset\s*=
+      1    0.0%    1.4%  LazyCompile: *setHeader node:_http_outgoing:574:57
+      1    0.0%    1.4%  LazyCompile: *set C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\application.js:359:23
+      1    0.0%    1.4%  LazyCompile: *send C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\response.js:111:25
+      1    0.0%    1.4%  LazyCompile: *formatValue node:internal/util/inspect:745:21
+      1    0.0%    1.4%  LazyCompile: *formatArray node:internal/util/inspect:1634:21
+      1    0.0%    1.4%  LazyCompile: *fastparse C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\parseurl\index.js:95:20
+      1    0.0%    1.4%  Function: ^write_ node:_http_outgoing:730:16
+      1    0.0%    1.4%  Function: ^stringify C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\response.js:1145:20
+      1    0.0%    1.4%  Function: ^processTicksAndRejections node:internal/process/task_queues:68:35
+      1    0.0%    1.4%  Function: ^normalizeEncoding node:internal/util:160:27
+      1    0.0%    1.4%  Function: ^internalBinding node:internal/bootstrap/loaders:164:45
+      1    0.0%    1.4%  Function: ^handleWriteReq node:internal/stream_base_commons:45:24
+      1    0.0%    1.4%  Function: ^getEncodingOps node:buffer:679:24
+      1    0.0%    1.4%  Function: ^formatRaw node:internal/util/inspect:820:19
+      1    0.0%    1.4%  Function: ^connectionListenerInternal node:_http_server:443:36
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+     74    0.2%  100.0%  JavaScript
+      0    0.0%    0.0%  C++
+    105    0.3%  141.9%  GC
+  35017   99.8%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+  32376   92.3%  C:\Windows\SYSTEM32\ntdll.dll
+
+   2640    7.5%  C:\Program Files\nodejs\node.exe
+   2336   88.5%    C:\Program Files\nodejs\node.exe
+   1712   73.3%      Function: ^handleWriteReq node:internal/stream_base_commons:45:24
+   1712  100.0%        Function: ^writeGeneric node:internal/stream_base_commons:147:22
+   1088   63.6%          LazyCompile: *_write node:internal/streams/writable:283:16
+   1088  100.0%            Function: ^Writable.write node:internal/streams/writable:333:36
+    624   36.4%          Function: ^Socket._writeGeneric node:net:769:42
+    624  100.0%            Function: ^Socket._write node:net:806:35
+    215    9.2%      LazyCompile: *calcularRandoms C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\server.js:27:25
+    215  100.0%        Function: ^<anonymous> C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\server.js:36:26
+    125   58.1%          LazyCompile: *handle C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\layer.js:86:49
+    125  100.0%            Function: ^next C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\route.js:116:16
+     90   41.9%          Function: ^handle C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\layer.js:86:49
+     87   96.7%            Function: ^next C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\route.js:116:16
+      3    3.3%            LazyCompile: ~next C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\route.js:116:16
+     85    3.6%      Function: ^stringify C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\response.js:1145:20
+     85  100.0%        Function: ^json C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\response.js:250:25
+     85  100.0%          Function: ^<anonymous> C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\server.js:36:26
+     49   57.6%            LazyCompile: *handle C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\layer.js:86:49
+     36   42.4%            Function: ^handle C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\layer.js:86:49
+     25    1.1%      Function: ^writevGeneric node:internal/stream_base_commons:122:23
+     25  100.0%        Function: ^Socket._writeGeneric node:net:769:42
+     25  100.0%          Function: ^Socket._writev node:net:801:36
+     25  100.0%            Function: ^doWrite node:internal/streams/writable:398:17
+     24    1.0%      LazyCompile: ~handleWriteReq node:internal/stream_base_commons:45:24
+     17   70.8%        Function: ^writeGeneric node:internal/stream_base_commons:147:22
+     17  100.0%          Function: ^Socket._writeGeneric node:net:769:42
+     17  100.0%            Function: ^Socket._write node:net:806:35
+      7   29.2%        LazyCompile: ~writeGeneric node:internal/stream_base_commons:147:22
+      7  100.0%          LazyCompile: ~Socket._writeGeneric node:net:769:42
+      7  100.0%            LazyCompile: ~Socket._write node:net:806:35
+     24    1.0%      C:\Program Files\nodejs\node.exe
+      5   20.8%        Function: ^expressInit C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\middleware\init.js:29:30
+      5  100.0%          LazyCompile: *handle C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\layer.js:86:49
+      5  100.0%            Function: ^trim_prefix C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\index.js:293:23
+      4   16.7%        LazyCompile: *formatProperty node:internal/util/inspect:1810:24
+      3   75.0%          LazyCompile: *formatArray node:internal/util/inspect:1634:21
+      3  100.0%            Function: ^formatRaw node:internal/util/inspect:820:19
+      1   25.0%          LazyCompile: *formatRaw node:internal/util/inspect:820:19
+      1  100.0%            LazyCompile: *formatValue node:internal/util/inspect:745:21
+      4   16.7%        Function: ^format C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\content-type\index.js:65:17
+      4  100.0%          Function: ^setCharset C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\utils.js:248:41
+      4  100.0%            Function: ^send C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\response.js:111:25
+      2    8.3%        Function: ^header C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\response.js:777:29
+      2  100.0%          Function: ^json C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\response.js:250:25
+      2  100.0%            Function: ^<anonymous> C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\server.js:36:26
+      1    4.2%        LazyCompile: ~pathtoRegexp C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\path-to-regexp\index.js:28:22
+      1  100.0%          LazyCompile: ~Layer C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\layer.js:33:15
+      1  100.0%            LazyCompile: ~use C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\index.js:439:25
+      1    4.2%        LazyCompile: ~getStack C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\depd\index.js:381:19
+      1  100.0%          LazyCompile: ~depd C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\depd\index.js:103:15
+      1  100.0%            Function: ~<anonymous> C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\body-parser\index.js:1:1
+      1    4.2%        LazyCompile: ~URL node:internal/url:620:14
+      1  100.0%          LazyCompile: ~pathToFileURL node:internal/url:1455:23
+      1  100.0%            Function: ^resolveExports node:internal/modules/cjs/loader:472:24
+      1    4.2%        LazyCompile: *set C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\application.js:359:23
+      1  100.0%          Function: ^app.<computed> C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\application.js:490:25
+      1  100.0%            Function: ^json C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\response.js:250:25
+      1    4.2%        LazyCompile: *handle C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%          Function: ^trim_prefix C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\index.js:293:23
+      1  100.0%            LazyCompile: *next C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\index.js:177:16
+      1    4.2%        LazyCompile: *formatRaw node:internal/util/inspect:820:19
+      1  100.0%          LazyCompile: *formatValue node:internal/util/inspect:745:21
+      1  100.0%            LazyCompile: *inspect node:internal/util/inspect:292:17
+      1    4.2%        LazyCompile: *calcularRandoms C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\server.js:27:25
+      1  100.0%          Function: ^<anonymous> C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\server.js:36:26
+      1  100.0%            LazyCompile: *handle C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\layer.js:86:49
+      1    4.2%        Function: ~<anonymous> C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\debug\src\node.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    4.2%        Function: ^getConstructorName node:internal/util/inspect:567:28
+      1  100.0%          Function: ^formatRaw node:internal/util/inspect:820:19
+      1  100.0%            LazyCompile: *formatValue node:internal/util/inspect:745:21
+     28    1.1%    Function: ^<anonymous> C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\server.js:36:26
+     16   57.1%      LazyCompile: *handle C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\layer.js:86:49
+     16  100.0%        Function: ^next C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\route.js:116:16
+     16  100.0%          Function: ^dispatch C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\route.js:98:45
+     16  100.0%            LazyCompile: *next C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\index.js:177:16
+     12   42.9%      Function: ^handle C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\layer.js:86:49
+     12  100.0%        Function: ^next C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\route.js:116:16
+     12  100.0%          Function: ^dispatch C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\route.js:98:45
+      7   58.3%            Function: ^handle C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\layer.js:86:49
+      5   41.7%            LazyCompile: *next C:\Users\duvam\Documents\Coder House backend\Logs_profiling_debug\ejercicio2_curl\node_modules\express\lib\router\index.js:177:16
+

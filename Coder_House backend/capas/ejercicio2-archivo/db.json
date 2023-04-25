@@ -1,0 +1,1 @@
+[{"tipo":"suma","params":[4,3],"resultado":7,"timestamp":1661103706545,"id":1},{"tipo":"suma","params":[4,3],"resultado":7,"timestamp":1661103714991,"id":2},{"tipo":"suma","params":[4,3],"resultado":7,"timestamp":1661103715928,"id":3},{"tipo":"division","params":[8,3],"resultado":2.6666666666666665,"timestamp":1661103733781,"id":4}]

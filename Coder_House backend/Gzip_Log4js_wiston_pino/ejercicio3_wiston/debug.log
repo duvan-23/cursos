@@ -1,0 +1,11 @@
+{"level":"info","message":"Server en el 8080"}
+{"level":"info","message":"Parametros correctos: 5 8"}
+{"level":"error","message":"Parametros invalidos"}
+{"level":"info","message":"Parametros correctos: 5 11"}
+{"level":"warn","message":"Ruta GET /suma?n1=5&n2=11 no implementada"}
+{"level":"info","message":"Parametros correctos: 5 11"}
+{"level":"error","message":"Parametros invalidos"}
+{"level":"info","message":"Server en el 8080"}
+{"level":"warn","message":"Ruta GET /cc no implementada"}
+{"level":"info","message":"Parametros correctos: 2 3"}
+{"level":"error","message":"Parametros invalidos"}

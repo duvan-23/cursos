@@ -1,0 +1,5 @@
+{"level":30,"time":1659069097372,"pid":20900,"hostname":"DESKTOP-7QERF6Q","msg":"Server en el 8080"}
+{"level":30,"time":1659069108797,"pid":20900,"hostname":"DESKTOP-7QERF6Q","a":2,"msg":"Parametros correctos: 5 77"}
+{"level":50,"time":1659069120059,"pid":20900,"hostname":"DESKTOP-7QERF6Q","msg":"Parametros invalidos"}
+{"level":40,"time":1659069130951,"pid":20900,"hostname":"DESKTOP-7QERF6Q","msg":"Ruta GET /sumr?n1=5&n2=a no implementada"}
+{"level":30,"time":1659069148099,"pid":20900,"hostname":"DESKTOP-7QERF6Q","a":2,"msg":"Parametros correctos: 51 3"}

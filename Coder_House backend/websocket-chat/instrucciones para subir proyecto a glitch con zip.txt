@@ -1,0 +1,8 @@
+1- crear archivo .zip(rar da error) y ponerlo en assets (glitch)
+2-click en el archivo que subimos y copiar url
+3-abrir terminal
+4- colocar en terminal: wget -O nombre_archivo.zip url
+5- enter y luego ls y validamos que aparezca el archivo cargado
+6- unzip nombre_archivo.rar -d .
+7 - y enter para remplazar dos veces
+8-refresh - listo

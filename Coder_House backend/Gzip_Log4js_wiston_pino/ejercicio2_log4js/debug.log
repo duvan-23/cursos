@@ -1,0 +1,5 @@
+[2022-07-28T22:23:44.994] [INFO] prod - Server en el 8080
+[2022-07-28T22:24:12.760] [ERROR] prod - Parametros invalidos
+[2022-07-28T22:31:56.691] [INFO] prod - Parametros correctos: 2 2
+[2022-07-28T22:32:10.461] [ERROR] prod - Parametros invalidos
+[2022-07-28T22:32:24.940] [INFO] prod - Parametros correctos: 5 77

@@ -1,0 +1,13 @@
+{
+  "name": "ejercicio1_http",
+  "version": "1.0.0",
+  "description": "",
+  "main": "clienteHttp.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

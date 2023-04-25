@@ -1,0 +1,47 @@
+extends carrito 
+
+block productosCarrito
+    div.col-sm-7
+        h1.text-center(style="color:blue;")!="Productos del Carrito"
+        br
+        -if(productos.length)
+            div.row
+                input(type='hidden',id=`admin2`,value=`${productos[0].admin}` )
+                each producto, index in productos
+                    div.col-sm-4(style="hight:40px;")
+                        div.card
+                            img.card-img-top(src=producto.productos.foto,style="width:100px; margin-left:40px;")
+                            div.card-body
+                                h5.card-title=producto.productos.nombre
+                                p.card-text=`ID Producto: ${producto.productos.id}`
+                                p.card-text=producto.productos.descripcion
+                                p.card-text=`Precio: $${producto.productos.precio}`
+                                p.card-text=`codigo: ${producto.productos.codigo}`
+                                p.card-text=`Stock : ${producto.productos.stock}`
+                                p.card-text=`Timestamp : ${producto.productos.timestamp}`
+                                p.font-italic.card-text=`ID carrito : ${producto.id}`
+                                p.font-italic.card-text=`Timestamp carrito: ${producto.timestamp}`
+                                input(type='hidden',id=`valor${index+1}`,value=`${producto.id}` )
+                                input(type='hidden',id=`valorp${index+1}`,value=`${producto.productos.id}` )
+                                input(type='hidden',id=`valor2${index+1}`,value=`${producto.productos.nombre}` )
+                                input(type='hidden',id=`valor3${index+1}`,value=`${producto.productos.precio}` )
+                                input(type='hidden',id=`valor4${index+1}`,value=`${producto.productos.foto}` )
+                                input(type='hidden',id=`valor5${index+1}`,value=`${producto.productos.descripcion}` )
+                                input(type='hidden',id=`valor6${index+1}`,value=`${producto.productos.codigo}` )
+                                input(type='hidden',id=`valor7${index+1}`,value=`${producto.productos.stock}` )
+                                a.botones-editarc.btn.btn-primary(id=`editar${index+1}`, style="font-size:10px") Actualizar
+                                a.botones-eliminarc.btn.btn-danger(id=`eliminar${index+1}`, style="font-size:10px") Eliminar
+        -else
+            h2.alert.alert-warning!="No hay productos"
+    div.modal.fade#myModal(tabindex="-1")    
+        div.modal-dialog
+            div.modal-content        
+                div.modal-header
+                    h4.modal-title  Modal Header
+                    button.btn-close(type="button", data-dismiss="modal") d  
+                div.modal-body
+                    p texto
+                div.modal-footer
+                    button.btn.btn-secondary(type="button", data-dismiss="modal")  Close  
+                    button.btn.btn-primary(type="button")  save
+    script(src='/envioCarrito.js')

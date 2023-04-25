@@ -1,0 +1,11 @@
+extends inicio 
+block carrito 
+    div.col-sm-5(style="background:aqua;")
+        h1(style="color:blue;padding:5px;margin-left:29px")!="Carrito de compras"
+        br
+        form#form_carrito(autocomplete='off', style="width:80% ;margin-left:35px")
+            div.form-group
+                label(for="id") Id producto:
+                input#id.form-control(type='number', placeholder='Id' name='title' required)    
+            button.text-center.btn.btn-success.mt-3(type="submit", name="enviar", style="margin-left:130px") Agregar
+    

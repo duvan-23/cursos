@@ -1,0 +1,21 @@
+<h1 style="color:blue;">Ingrese Productos Ejs</h1>
+
+<br>
+<form action="/productos" method="post">
+    <div class="form-group">
+        <label for="nombre"><b>Nombre</b></label>
+        <input id="nombre" class="form-control" type="text" name="nombre" required>
+    </div>
+    <div class="form-group">
+        <label for="precio"><b>Precio</b></label>
+        <input id="precio" class="form-control" type="number" name="precio" required>
+    </div>
+    <div class="form-group">
+        <label for="foto"><b>Foto URL</b></label>
+        <input id="foto" class="form-control" type="text" name="foto" placeholder="https://cdn2.iconfinder.com/data/icons/leto-blue-big-data/64/big_data-30-128.png" required>
+    </div>
+    <button class="btn btn-success mt-3 mb-5">Guardar Producto</button>
+</form>
+<form action="/productos" method="get">
+    <button class="btn btn-success mt-3 mb-5">Vista Productos</button>
+</form>

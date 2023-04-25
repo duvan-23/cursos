@@ -1,0 +1,13 @@
+{
+  "name": "ejercicio2_dto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "PersonaDTO.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

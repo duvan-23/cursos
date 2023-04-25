@@ -1,0 +1,27 @@
+<div class="container mt-3">
+    <div class="jumbotron">
+        <h2 style="color:blue;">Vista de Productos</h2>
+        {{#if productos.length }}
+            <div class="table-responsive">
+                <table class="table table-dark">
+                    <tr style="color: yellow;"> <th>Nombre</th> <th>Precio</th> <th style="text-align:center">Foto</th> </tr>
+                    {{#each  productos }}
+                        {{#with this}}
+                            <tr>
+                                <td>{{nombre}}</td>
+                                <td>{{precio}}</td>
+                                {{!-- <td>{{edad}}</td> --}}
+                                <td style="text-align:center"><img src="{{foto}}" alt="" width="30%" height="30%" ></td>
+                            </tr>
+                        {{/with}}
+                    {{/each}}
+                </table>
+            </div>
+        {{else}}
+            <h3 class="alert alert-warning">No hay productos</h3
+        >{{/if}}
+        <form action="/productos" method="post">
+            <button class="btn btn-success mt-3 mb-5">Formulario</button>
+        </form>
+    </div>
+</div>

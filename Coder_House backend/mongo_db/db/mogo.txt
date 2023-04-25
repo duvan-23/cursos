@@ -1,0 +1,43 @@
+//path mongod-local:  mongod --dbpath="C:\Users\duvam\Documents\db"
+
+use ecommerce
+db.createCollection('productos')
+db.createCollection('mensajes')
+
+1. y 2.
+db.productos.insertMany([{nombre:'Carro',precio:2860,foto:'https://cdn-icons-png.flaticon.com/512/2554/2554969.png'},{nombre:'Moto',precio:2300,foto:'https://cdn-icons-png.flaticon.com/512/27/27176.png'},{nombre:'Barco',precio:3350,foto:'https://cdn-icons-png.flaticon.com/512/840/840081.png'},{nombre:'Bicicleta',precio:120,foto:'https://cdn-icons-png.flaticon.com/512/27/27176.png'},{nombre:'Patineta',precio:580,foto:'https://cdn-icons-png.flaticon.com/512/2554/2554969.png'},{nombre:'Bus',precio:900,foto:'https://cdn-icons-png.flaticon.com/512/2554/2554969.png'},{nombre:'Triciclo',precio:1280,foto:'https://cdn-icons-png.flaticon.com/512/27/27176.png'},{nombre:'Cuatrimoto',precio:1700,foto:'https://cdn-icons-png.flaticon.com/512/2554/2554969.png'},{nombre:'Carro deportivo',precio:4990,foto:'https://cdn-icons-png.flaticon.com/512/2554/2554969.png'},{nombre:'Moto deportiva',precio:4320,foto:'https://cdn-icons-png.flaticon.com/512/2554/2554969.png'}])
+db.mensajes.insertMany([{author:'duvan@gmail.com',message:'Buen dia!',fecha:'15/5/2022 18:20:57'},{author:'juan@hotmail.com',message:'Como estan?',fecha:'15/5/2022 18:20:57'},{author:'luis@hotmail.com',message:'Bien y ustedes?',fecha:'15/5/2022 18:20:57'},{author:'david@hotmail.com',message:'Estudiando',fecha:'15/5/2022 18:20:57'},{author:'camilo@hotmail.com',message:'Trabajando',fecha:'15/5/2022 18:20:57'},{author:'laura@hotmail.com',message:'Nos encontramos el sabado',fecha:'15/5/2022 18:20:57'},{author:'carol@hotmail.com',message:'yo iré',fecha:'15/5/2022 18:20:57'},{author:'andrea@hotmail.com',message:'yo tambien',fecha:'15/5/2022 18:20:57'},{author:'carlos@hotmail.com',message:'yo no puedo',fecha:'15/5/2022 18:20:57'},{author:'duvan@hotmail.com',message:'ahi estaré',fecha:'15/5/2022 18:20:57'}])
+
+3.
+db.productos.find()
+db.mensajes.find()
+
+4.
+db.productos.find().count()
+db.mensajes.find().count()
+
+5.
+    a) db.productos.insertOne({nombre:'camion',precio:2110,foto:'https://cdn-icons-png.flaticon.com/512/2554/2554969.png'})
+    b) 
+        1. db.productos.find({precio:{$lt: 1000}})
+        2. db.productos.find({precio:{$gte: 1000,$lte:3000}})
+        3. db.productos.find({precio:{$gt: 3000}})
+        4. db.productos.find({},{nombre:1,_id:0}).sort({precio:1}).skip(2).limit(1)
+    c) db.productos.update({},{$set: {'stock': 100}},{upsert:false,multi:true})
+    d) db.productos.updateMany({precio:{$gt:4000}},{$set: {stock: 0}})
+    e) db.productos.deleteMany({precio:{$lt: 1000}})
+
+
+6. 
+use admin
+db.createUser({user:'pepe',pwd:'asd456',roles:[{role:'read',db: 'ecommerce'}]})
+
+//ruta con autenticación  mongod-local-auth: mongod --dbpath="C:\Users\duvam\Documents\db" --auth
+mongo -u pepe -p asd456
+use ecommerce
+
+//se intenta insertar pero no deja debido a que no tiene permisos para escribir
+db.productos.insertOne({nombre:'camion',precio:2110,foto:'https://cdn-icons-png.flaticon.com/512/2554/2554969.png'})
+
+//si se consulta ecommerce, dejara leer la información 
+db.productos.find()

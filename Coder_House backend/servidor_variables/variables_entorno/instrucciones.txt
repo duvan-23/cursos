@@ -1,0 +1,9 @@
+//cmd
+//set TEST=test1 
+//echo %TEST% 
+//result= test1
+
+//bash
+//export TEST=test1
+//echo $TEST
+//result= test1

@@ -1,0 +1,15 @@
+extends inicio 
+
+block formulario  
+    form
+        div.form-group
+            label(for="nombre") nombre:
+            input#nombre.form-control(type='text', placeholder='nombre' name='title' required)
+        div.form-group
+            label(for="precio") Precio:
+            input#precio.form-control(type='number', placeholder='precio' name='price' required)
+        div.form-group
+            label(for="foto") Foto URL:
+            input#nombre.form-control(type='txt', placeholder='foto' name='thumbnail' required)    
+            
+        button.btn.btn-success.mt-3 Enviar

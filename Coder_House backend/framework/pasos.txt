@@ -1,0 +1,75 @@
+//  adonis
+npm i --global @adonis.js
+adonis new my-app-name
+
+cd my-app-name
+
+adonis serve--dev
+
+//crear carpeta controladores automatico
+adonis make:controller Palabras
+
+http
+
+
+//run dev
+adonis serve --dev
+
+//prueba ejercicio
+/sin-controller?palabras=hola%20como%20estas?
+/con-controller?palabras=hola%20como%20estas?
+
+
+// nest
+npm install -g @nestjs/cli
+
+nest new app-name
+
+cd app-name
+//run
+npm run start:dev
+
+//crear modulo
+nest generate module <name>
+
+//crear controlador
+nest generate controller <name>
+
+//crear servicio
+nest generate service <name>
+
+//crear interfase
+nest generate interface interface/cat
+
+//crear dto
+mkdir src/dto && touch src/dto/create-cat.dto.ts
+
+//instalar swagger
+
+npm install --save @nestjs/swagger swagger-ui-express
+
+
+// sails 
+npm i sails -g
+
+sails new test
+
+//descomentar linea config/models.js  migrate: 'alter'
+cd test 
+sails generate api books
+
+nodemon app.js
+
+//  http://127.0.0.1:1337/book/find/2  buscar por id
+//  http://127.0.0.1:1337/book/create?titulo=Se%20creo%20%20por%20blueprint   crear por url
+// http://127.0.0.1:1337/book/update/2?titulo=La%20vida%20es%20un%20viaje    actualizar desde url
+// http://127.0.0.1:1337/book/destroy/3  eliminar desde url
+
+sails new ejercicio1
+cd ejercicio1
+sails generate api pelicula
+sails lift
+1
+http://127.0.0.1:1337/pelicula/create?nombre=El%20club%20de%20la%20pelea&genero=drama&anio=2008
+http://127.0.0.1:1337/pelicula/update/1?anio=2009
+http://127.0.0.1:1337/pelicula/destroy/1
