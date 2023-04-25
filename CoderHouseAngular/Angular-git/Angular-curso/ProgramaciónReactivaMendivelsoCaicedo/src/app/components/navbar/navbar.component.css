@@ -1,0 +1,29 @@
+.menu{
+  height: 1000px;
+  background: black;
+}
+.letra{
+  color:white;
+  font-size: 23px;
+}
+.custom-br {
+  display:block;
+  width: 100%;
+  height: 2px;
+  background-color: white; /*change color*/
+}
+.tamaño{
+  font-size: 17px;
+}
+.activa{
+  background-color:green;
+}
+.inactiva{
+  background-color:red;
+}
+.dot {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  display: inline-block;
+}

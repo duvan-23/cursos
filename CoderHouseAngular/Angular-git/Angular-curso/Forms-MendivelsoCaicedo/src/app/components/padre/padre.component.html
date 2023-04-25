@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="d-flex flex-row">
+    <div class="col-2">
+      <app-navbar
+      [listaPersonas]="listaPersonasPadre"
+      [listaTiendas]="listaTiendasPadre"
+      ></app-navbar>
+    </div>
+    <div>
+      <app-toolbar></app-toolbar>
+      <app-contenido
+      [listaPersonas]="listaPersonasPadre"
+      [listaTiendas]="listaTiendasPadre"
+      [listaCargos]="listaCargosPadre"
+      (eventoSalidaPersona)="agregarEmpleadoPadre($event)"
+      ></app-contenido>
+    </div>
+  </div>
+</div>
+

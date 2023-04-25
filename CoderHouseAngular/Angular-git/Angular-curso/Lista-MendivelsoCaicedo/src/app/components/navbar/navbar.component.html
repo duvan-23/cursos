@@ -1,0 +1,51 @@
+<div class="menu">
+  <nav class="navbar navbar-dark pt-4 p-2">
+
+    <!-- Links -->
+    <ul class="navbar-nav p-2">
+      <li class="nav-item active mb-2 mt-4">
+        <a class="nav-link" href="#">Paises Turisticos</a>
+      </li>
+      <li class="nav-item mb-2">
+        <a class="nav-link" href="#">Rutas de viaje</a>
+      </li>
+      <li class="nav-item mb-2">
+        <a class="nav-link" href="#">Transporte</a>
+      </li>
+    </ul>
+    <span class="custom-br"></span>
+    <h4 class="letra">Oficinas:</h4>
+    <ul class="navbar-nav ">
+      <div *ngFor="let tienda of listaTiendas">
+        <div [ngSwitch]="tienda.nombre">
+          <div *ngSwitchCase="'Central'">
+            <li class="nav-item active">
+              <div class="d-flex"><h5 class="letra"><span [ngClass]="tienda.activa ==true?'activa':'inactiva'">-</span>Central 12</h5></div>
+            </li>
+            <div *ngFor="let persona of listaPersonas">
+              <li *ngIf="persona.tienda==tienda.tienda ">
+                <ul>
+                  <li class="tamaño" [style.color]="persona.cargo=='Jefe'?'yellow':persona.cargo=='Encargado'?'Aqua':'white'">{{persona.nombre | uppercase}}</li>
+                </ul>
+              </li>
+            </div>
+          </div>
+          <div *ngSwitchCase="'Avenida 12'">
+            <li class="nav-item active">
+              <div class="d-flex"><h5 class="letra"><span [ngClass]="tienda.activa ==true?'activa':'inactiva'">-</span>Avenida #3</h5></div>
+            </li>
+            <div *ngFor="let persona of listaPersonas">
+              <li *ngIf="persona.tienda==tienda.tienda ">
+                <ul>
+                  <li class="tamaño" [style.color]="persona.cargo=='Jefe'?'yellow':persona.cargo=='Encargado'?'Aqua':'white'">{{persona.nombre | uppercase}}</li>
+                </ul>
+              </li>
+            </div>
+          </div>
+          <div *ngSwitchDefault>{{tienda.nombre}}</div>
+        </div>
+      </div>
+    </ul>
+  </nav>
+</div>
+

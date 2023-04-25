@@ -1,0 +1,80 @@
+<h1>Directivas de atributo</h1>
+<h2>Directiva ngClass</h2>
+
+<p [ngClass]="variable1 <5?'texto-error':'texto-exito grande'">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+   standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+   a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+</p>
+<p class="grande" [class.texto-error]="true">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+   standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+   a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+</p>
+<p [ngClass]="variable1 <5?'texto-error':variable1 ===5?'texto-exito':' '">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+   standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+   a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+</p>
+
+<hr>
+<h1>Directiva ngStyle</h1>
+
+<p [style.border]="variable2 ==5 ?'1px solid black': '1px solid red' ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+  a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+</p>
+<hr>
+<h1>Directiva personalizada</h1>
+
+<p appDirectivaPersonalizada>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+  a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+</p>
+<hr>
+<h1>Directiva estructurales</h1>
+<h2>Directiva ngFor</h2>
+<p>{{listaNombres}}</p>
+
+<ol>
+  <li *ngFor="let nombre of listaNombres">
+    {{nombre.nombre}} - {{nombre.edad}}
+  </li>
+</ol>
+<hr>
+<h2>Directiva ngIf</h2>
+<ol>
+  <div *ngFor="let persona of listaNombres">
+    <li *ngIf="persona.edad>18">
+      {{persona.nombre}} - {{persona.edad}}
+    </li>
+  </div>
+</ol>
+<hr>
+<h2>Directiva ngSwitch</h2>
+<div [ngSwitch]="usuarioActivo.nombre">
+  <div *ngSwitchCase="'Lautaro'">Usuario activo es Lautaro</div>
+  <div *ngSwitchCase="'Abner'">Usuario activo es Aber</div>
+  <div *ngSwitchDefault>Usuario activo es {{usuarioActivo.nombre}}</div>
+</div>
+
+<hr>
+<h2>Pipes</h2>
+<p>{{fecha | date:'dd/MM/YY'}}</p>
+<ol>
+  <div *ngFor="let persona of listaNombres">
+    <li>
+      <div>{{persona | json}}</div>
+      <div>{{persona.nombre | uppercase}}</div>
+      <div>{{persona.nombre | lowercase}}</div>
+      <div>{{persona.nombre | titlecase}}</div>
+    </li>
+  </div>
+</ol>
+<hr>
+<hr>
+<h2>NgModel</h2>
+
+<input type="text" placeholder="Ingrese su nombre"[(ngModel)]="nombre">
+<P>Su nombre es: {{nombre}}</P>
+
+
+<p>Variable1 tiene un valor de {{variable1}}</p>
+<button (click)="manejarEvento()">Clickeame</button>

@@ -1,0 +1,22 @@
+.menu{
+  height: 1000px;
+  background: black;
+}
+.letra{
+  color:white;
+}
+.custom-br {
+  display:block;
+  width: 100%;
+  height: 2px;
+  background-color: white; /*change color*/
+}
+.tamaño{
+  font-size: 10px;
+}
+.activa{
+  color:green;
+}
+.inactiva{
+  color:red;
+}

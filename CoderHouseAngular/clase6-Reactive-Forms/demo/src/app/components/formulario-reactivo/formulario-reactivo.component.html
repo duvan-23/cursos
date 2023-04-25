@@ -1,0 +1,36 @@
+<h1>Formulario Reactivo</h1>
+
+<form [formGroup]="formularioUsuario" (ngSubmit)="agregarUsuario()">
+  <div>
+    <label for="">Nombre: </label>
+    <input type="text" formControlName="nombre">
+    <p *ngIf="formularioUsuario.get('nombre')?.touched && formularioUsuario.get('nombre')?.errors?.['required']">El campo nombre es requerido</p>
+  </div>
+  <div>
+    <label for="">Correo: </label>
+    <input type="text" formControlName="correo">
+    <p *ngIf="formularioUsuario.get('correo')?.touched && formularioUsuario.get('correo')?.errors?.['required']">El campo correo es requerido</p>
+    <p *ngIf="formularioUsuario.get('correo')?.touched && formularioUsuario.get('correo')?.errors?.['pattern']">El formato de correo no es correcto</p>
+  </div>
+  <div>
+    <label for="">Contraseña: </label>
+    <input type="password" formControlName="contraseña">
+    <p *ngIf="formularioUsuario.get('contraseña')?.touched && formularioUsuario.get('contraseña')?.errors?.['required']">El campo contraseña es requerido</p>
+    <p *ngIf="formularioUsuario.get('contraseña')?.touched && formularioUsuario.get('contraseña')?.errors?.['minlength']">El campo contraseña debe tener al menos 5 caracteres</p>
+    <p *ngIf="formularioUsuario.get('contraseña')?.touched && formularioUsuario.get('contraseña')?.errors?.['pattern']">El campo contraseña debe tener al menos una letra Mayuscula</p>
+  </div>
+  <div>
+    <label for="">Confirmar contraseña: </label>
+    <input type="password" formControlName="contraseña2">
+    <p *ngIf="formularioUsuario.get('contraseña2')?.touched && formularioUsuario.get('contraseña2')?.errors?.['required']">El campo contraseña es requerido</p>
+    <p *ngIf="formularioUsuario.get('contraseña2')?.touched && formularioUsuario.get('contraseña2')?.errors?.['minlength']">El campo contraseña debe tener al menos 5 caracteres</p>
+    <p *ngIf="formularioUsuario.get('contraseña2')?.touched && formularioUsuario.get('contraseña2')?.errors?.['pattern']">El campo contraseña debe tener al menos una letra Mayuscula</p>
+    <p *ngIf="!contrasenasIguales">Las contraseñas deben ser iguales</p>
+  </div>
+  <div>
+    <label for="">Admin: </label>
+    <input type="checkbox" formControlName="admin">
+  </div>
+  <!-- <button type="submit" >Agregar usuario</button> -->
+  <button type="submit" [disabled]="formularioUsuario.invalid">Agregar usuario</button>
+</form>

@@ -1,0 +1,25 @@
+<!-- <h1>{{listaTiendas}}</h1>
+<h1>{{listaEstudiantesHijo[0].nombre}}</h1> -->
+<mat-tab-group mat-align-tabs="center" animationDuration="2000ms">
+  <mat-tab >
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">groups</mat-icon>
+        Estudiantes
+    </ng-template>
+    <app-estudiantes></app-estudiantes>
+  </mat-tab>
+  <mat-tab >
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">library_books</mat-icon>
+        Cursos
+    </ng-template>
+    <app-cursos></app-cursos>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon class="example-tab-icon">school</mat-icon>
+        Clases
+    </ng-template>
+    <app-clases></app-clases>
+  </mat-tab>
+</mat-tab-group>

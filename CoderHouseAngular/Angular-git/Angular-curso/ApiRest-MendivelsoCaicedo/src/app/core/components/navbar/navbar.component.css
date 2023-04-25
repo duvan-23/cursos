@@ -1,0 +1,19 @@
+.menu{
+  height: 1000px;
+  background: black;
+}
+
+a:hover{
+  background-color: aqua;
+}
+
+a{
+  width: 180px;
+  text-align: left;
+}
+
+.usuario{
+  color: white;
+  padding-top: 15px;
+  padding-left: 10px;
+}

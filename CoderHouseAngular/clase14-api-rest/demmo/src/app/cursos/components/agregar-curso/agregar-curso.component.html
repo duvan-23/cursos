@@ -1,0 +1,48 @@
+<h3>Agregar Curso</h3>
+
+<form [formGroup]="formulario" (ngSubmit)="agregarCurso()">
+  <div class="row">
+    <div class="col-md-4">
+      <mat-form-field appearance="fill" class="tamaño">
+        <mat-label>Nombre del curso</mat-label>
+        <input matInput formControlName="nombre">
+      </mat-form-field>
+    </div>
+    <div class="col-md-4">
+      <mat-form-field appearance="fill" class="tamaño">
+        <mat-label>Comision del curso</mat-label>
+        <input matInput formControlName="comision">
+      </mat-form-field>
+    </div>
+    <div class="col-md-4">
+      <mat-form-field appearance="fill" class="tamaño">
+        <mat-label>Nombre del profesor del curso</mat-label>
+        <input matInput formControlName="profesor">
+      </mat-form-field>
+    </div>
+    <div class="col-md-4">
+      <mat-form-field appearance="fill" class="tamaño">
+        <mat-label>Inicio del curso</mat-label>
+        <input matInput [matDatepicker]="fechaInicio" formControlName="inicio">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="fechaInicio"></mat-datepicker-toggle>
+        <mat-datepicker #fechaInicio></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="col-md-4">
+      <mat-form-field appearance="fill" class="tamaño">
+        <mat-label>Fin del curso</mat-label>
+        <input matInput [matDatepicker]="fechaFinal" formControlName="fin">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="fechaFinal"></mat-datepicker-toggle>
+        <mat-datepicker #fechaFinal></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="col-md-4">
+      <mat-slide-toggle formControlName="inscripcionAbierta">Inscripciòn abierta</mat-slide-toggle>
+    </div>
+    <div class="col-md-12">
+      <button mat-raised-button color="primary" type="submit" class="tamaño">Agregar Curso</button>
+    </div>
+  </div>
+</form>

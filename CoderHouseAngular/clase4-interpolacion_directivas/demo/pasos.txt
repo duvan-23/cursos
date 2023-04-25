@@ -1,0 +1,14 @@
+ng new demo
+
+routing no
+css
+
+// generar componente
+cd demo
+ng g c components/directivas
+
+//correr
+ng serve -o
+
+//crear directiva
+ng generate directive directives/directiva-personalizada

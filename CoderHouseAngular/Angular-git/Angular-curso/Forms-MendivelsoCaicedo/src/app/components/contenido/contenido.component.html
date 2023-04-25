@@ -1,0 +1,46 @@
+<div class="row letras">
+  <div class="col-sm-12 offset-8">
+    <div class="row letras">
+      <form [formGroup]="formularioEmpleado" (ngSubmit)="agregarEmpleado()">
+        <div class="form-group mb-4">
+          <label for="exampleInputEmail1">Nombre Empleado</label>
+          <input type="text"  formControlName="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+          <div class="alert alert-danger" role="alert" *ngIf="formularioEmpleado.get('nombre')?.touched && formularioEmpleado.get('nombre')?.errors?.['required']">
+            Campo Nombre Obligatorio
+          </div>
+        </div>
+        <div class="form-group mb-4" >
+          <label for="exampleFormControlInput1">Email address</label>
+          <input type="email" formControlName="correo" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          <div class="alert alert-danger" role="alert" *ngIf="formularioEmpleado.get('correo')?.touched && formularioEmpleado.get('correo')?.errors?.['required']">
+            Campo Correo obligatorio
+          </div>
+          <div class="alert alert-danger" role="alert" *ngIf="formularioEmpleado.get('correo')?.touched && formularioEmpleado.get('correo')?.errors?.['pattern']">
+            El formato de correo no es correcto
+          </div>
+        </div>
+        <div class="form-group mb-4" >
+          <label for="exampleFormControlSelect1">Cargo del Empleado</label>
+          <select formControlName="cargo" class="form-select" id="exampleFormControlSelect1">
+            <option *ngFor="let cargo of listaCargos" [ngValue]="cargo">{{cargo}}</option>
+          </select>
+          <div class="alert alert-danger" role="alert" *ngIf="formularioEmpleado.get('cargo')?.touched && formularioEmpleado.get('cargo')?.errors?.['required']">
+            Campo Cargo obligatorio
+          </div>
+        </div>
+        <div class="form-group mb-4">
+          <label for="exampleFormControlSelect1">Tienda donde trabaja el empleado</label>
+          <select formControlName="tienda" class="form-select" id="exampleFormControlSelect1">
+            <option *ngFor="let tienda of listaTiendas" [ngValue]="tienda.tienda">{{tienda.nombre}}</option>
+          </select>
+          <div class="alert alert-danger" role="alert" *ngIf="formularioEmpleado.get('tienda')?.touched && formularioEmpleado.get('tienda')?.errors?.['required']">
+            Campo tienda obligatorio
+          </div>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary mt-4" [disabled]="formularioEmpleado.invalid">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
